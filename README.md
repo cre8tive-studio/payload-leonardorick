@@ -1,5 +1,7 @@
 # leonardorick
 
+Payload CMS for Leonardo Rick portifolio website
+
 This project was created using create-payload-app using the blog template.
 
 ## How to Use
