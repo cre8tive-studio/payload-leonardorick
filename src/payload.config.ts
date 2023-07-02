@@ -7,6 +7,7 @@ import Users from './collections/Users';
 import Media from './collections/Media';
 import Persons from './collections/Persons';
 import Recommendations from './collections/Recommendations';
+import cloudinaryPlugin from 'payload-cloudinary-plugin/dist/plugins';
 
 export default buildConfig({
   serverURL: process.env.SERVER_URL,
@@ -25,4 +26,5 @@ export default buildConfig({
   graphQL: {
     schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql'),
   },
+  plugins: [cloudinaryPlugin()],
 });

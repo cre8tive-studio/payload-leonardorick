@@ -4,7 +4,7 @@ import type { CollectionConfig } from 'payload/types';
 const Media: CollectionConfig = {
   slug: 'media',
   upload: {
-    staticDir: path.resolve(__dirname, '../../media'),
+    disableLocalStorage: true,
     // Specify the size name that you'd like to use as admin thumbnail
     adminThumbnail: 'thumbnail',
     imageSizes: [

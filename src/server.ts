@@ -1,29 +1,27 @@
 import express from 'express';
 import payload from 'payload';
-// import { mediaManagement } from 'payload-cloudinary-plugin';
+import { mediaManagement } from 'payload-cloudinary-plugin';
 
 require('dotenv').config();
 const app = express();
-
 // Redirect root to Admin panel
 app.get('/', (_, res) => {
   res.redirect('/admin');
 });
 
-// app.use(
-//   mediaManagement(
-//     {
-//       cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-//       api_key: process.env.CLOUDINARY_API_KEY,
-//       api_secret: process.env.CLOUDINARY_API_SECRET,
-//     },
-//     {
-//       folder: process.env.CLOUDINARY_FOLDER,
-//       use_filename: true,
-//       resource_type: 'image',
-//     }
-//   )
-// );
+app.use(
+  mediaManagement(
+    {
+      cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+      api_key: process.env.CLOUDINARY_API_KEY,
+      api_secret: process.env.CLOUDINARY_API_SECRET,
+    },
+    {
+      folder: process.env.CLOUDINARY_FOLDER,
+      use_filename: true,
+    }
+  )
+);
 const start = async () => {
   // Initialize Payload
   await payload.init({

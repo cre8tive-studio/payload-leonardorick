@@ -1,0 +1,3 @@
+# edit values and rename to mongodb-source-config.yaml
+password: <password>
+uri: mongodb+srv://<user>@main.<clusterid>.mongodb.net/
