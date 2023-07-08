@@ -244,6 +244,6 @@ demo/generated-types.ts
 demo/generated-schema.graphql
 
 # scripts
-scripts/tmp/*
-scripts/*config.yaml
+scripts/**/tmp/*
+scripts/**/*config.yaml
 
