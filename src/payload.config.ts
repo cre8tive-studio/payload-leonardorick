@@ -5,7 +5,7 @@ import Posts from './collections/Posts';
 import Tags from './collections/Tags';
 import Users from './collections/Users';
 import Media from './collections/Media';
-import Persons from './collections/Persons';
+import People from './collections/People';
 import Recommendations from './collections/Recommendations';
 import Quotes from './collections/Quotes';
 
@@ -16,7 +16,7 @@ export default buildConfig({
   admin: {
     user: Users.slug,
   },
-  collections: [Categories, Posts, Tags, Users, Media, Persons, Recommendations, Quotes],
+  collections: [Categories, Posts, Tags, Users, Media, Recommendations, Quotes, People],
   localization: {
     defaultLocale: 'en',
     locales: ['en', 'pt-BR'],

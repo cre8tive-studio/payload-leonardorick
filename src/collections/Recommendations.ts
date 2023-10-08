@@ -17,7 +17,7 @@ const Recommendations: CollectionConfig = {
     {
       name: 'author',
       type: 'relationship',
-      relationTo: 'persons',
+      relationTo: 'people',
     },
   ],
 };

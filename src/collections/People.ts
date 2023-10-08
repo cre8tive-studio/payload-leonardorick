@@ -1,7 +1,7 @@
 import { CollectionConfig } from 'payload/types';
 
-const Persons: CollectionConfig = {
-  slug: 'persons',
+const People: CollectionConfig = {
+  slug: 'people',
   admin: {
     useAsTitle: 'name',
   },
@@ -28,4 +28,4 @@ const Persons: CollectionConfig = {
     },
   ],
 };
-export default Persons;
+export default People;
