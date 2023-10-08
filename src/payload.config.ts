@@ -7,6 +7,8 @@ import Users from './collections/Users';
 import Media from './collections/Media';
 import Persons from './collections/Persons';
 import Recommendations from './collections/Recommendations';
+import Quotes from './collections/Quotes';
+
 import cloudinaryPlugin from 'payload-cloudinary-plugin/dist/plugins';
 
 export default buildConfig({
@@ -14,7 +16,7 @@ export default buildConfig({
   admin: {
     user: Users.slug,
   },
-  collections: [Categories, Posts, Tags, Users, Media, Persons, Recommendations],
+  collections: [Categories, Posts, Tags, Users, Media, Persons, Recommendations, Quotes],
   localization: {
     defaultLocale: 'en',
     locales: ['en', 'pt-BR'],
