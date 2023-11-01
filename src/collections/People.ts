@@ -18,6 +18,7 @@ const People: CollectionConfig = {
       name: 'description',
       type: 'textarea',
       required: true,
+      localized: true,
     },
     {
       name: 'image',
