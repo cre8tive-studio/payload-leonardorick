@@ -22,7 +22,9 @@ The 3 typical env vars will be `MONGODB_URI`, `PAYLOAD_SECRET`, and `PAYLOAD_CON
 
 #### Run migrate-db
 
-`./scripts/migrate-db.py`
+enter folder `scripts/migrate-db`
+
+run `python migrate-db.py`
 
 This script is intented to automate the process of getting data from a mongodb database an insert into another one
 

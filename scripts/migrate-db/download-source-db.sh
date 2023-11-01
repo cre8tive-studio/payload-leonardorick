@@ -1,4 +1,4 @@
-source ../.env
+source ../../.env
 dumpout=./tmp/mongodump
 mediaout=./tmp/cloudinary
 db=$MONGODB_DATABASE
