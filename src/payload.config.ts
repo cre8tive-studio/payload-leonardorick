@@ -1,4 +1,8 @@
 import { buildConfig } from 'payload/config';
+import { mongooseAdapter } from '@payloadcms/db-mongodb';
+import { slateEditor } from '@payloadcms/richtext-slate';
+import { webpackBundler } from '@payloadcms/bundler-webpack';
+
 import path from 'path';
 import Categories from './collections/Categories';
 import Posts from './collections/Posts';
@@ -12,9 +16,14 @@ import Quotes from './collections/Quotes';
 import cloudinaryPlugin from 'payload-cloudinary-plugin/dist/plugins';
 
 export default buildConfig({
+  db: mongooseAdapter({
+    url: process.env.MONGODB_URI,
+  }),
+  editor: slateEditor({}),
   serverURL: process.env.SERVER_URL,
   admin: {
     user: Users.slug,
+    bundler: webpackBundler(),
   },
   collections: [Categories, Posts, Tags, Users, Media, Recommendations, Quotes, People],
   localization: {

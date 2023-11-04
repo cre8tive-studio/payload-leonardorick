@@ -16,10 +16,13 @@
     "generate:types-frontend": "npm run generate:types && ./scripts/mv-types-frontend.sh"
   },
   "dependencies": {
+    "@payloadcms/bundler-webpack": "^1.0.5",
+    "@payloadcms/db-mongodb": "^1.0.6",
+    "@payloadcms/richtext-slate": "^1.1.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "payload": "^1.10.2",
-    "payload-cloudinary-plugin": "^0.1.0"
+    "payload": "^2.0.15",
+    "payload-cloudinary-plugin": "^0.1.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.9",
