@@ -53,3 +53,7 @@ The script has the following brew (system) dependencies
 
 1. `mongodb-database-tools` (usually available when installing mongoDB Server, try `brew list | grep mongodb-database-tools` to see if its available)
 2. `jq` (for parsing jsons)
+
+#### Add new collection
+
+`localized: true` will make the property of the collection be considered something for both languages and will accept translate when we change language on frontend properly requesting the data
