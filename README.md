@@ -22,7 +22,9 @@ The 3 typical env vars will be `MONGODB_URI`, `PAYLOAD_SECRET`, and `PAYLOAD_CON
 
 #### Run migrate-db
 
-enter folder `scripts/migrate-db`
+Before migrating you need to be sure that your IP adress is properly allowed on MongoDB in both projects. So check both clusters IP configurations to see if your IP can connect on them.
+
+enter folder `scripts/migrate-db` (run the command inside this folder so the path resolutions works properly)
 
 run `python migrate-db.py`
 

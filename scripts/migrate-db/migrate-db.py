@@ -64,6 +64,7 @@ def main():
     popen('./upload-target-db.sh')
 
     fix_media_metadata(media_collection)
+    print('script ended and information from source should now be available on target database')
 
 
 if __name__ == '__main__':
