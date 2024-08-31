@@ -19,6 +19,10 @@ const Recommendations: CollectionConfig = {
       type: 'relationship',
       relationTo: 'people',
     },
+    {
+      name: 'order',
+      type: 'number',
+    },
   ],
 };
 
