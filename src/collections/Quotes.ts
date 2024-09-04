@@ -18,6 +18,10 @@ const Quotes: CollectionConfig = {
       name: 'author',
       type: 'text',
     },
+    {
+      name: 'label',
+      type: 'text',
+    },
   ],
 };
 
