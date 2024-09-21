@@ -3,6 +3,7 @@ import json
 import os
 import cloudinary
 import cloudinary.uploader
+import cloudinary.api
 
 from dotenv import load_dotenv
 from pymongo import MongoClient
@@ -26,6 +27,9 @@ def fix_media_metadata(media_collection: Collection):
         for line in media:
             media_metadata.append(json.loads(line))
 
+    # cleanup data before uploading
+    cloudinary.api.delete_resources_by_prefix(f"{os.getenv('CLOUDINARY_FOLDER')}/")
+
     for j in media_metadata:
         secure_url = j['cloudinary']['secure_url']
         filename = secure_url.split('/')[-1]
@@ -47,6 +51,7 @@ def fix_media_metadata(media_collection: Collection):
                 }
             },
         )
+    print('Cloudinary images updated successfully')
 
 
 def main():
@@ -57,6 +62,8 @@ def main():
         api_secret=os.getenv('CLOUDINARY_TARGET_API_SECRET'),
         secure=True,
     )
+
+
     client = MongoClient(os.getenv('MONGODB_TARGET_URI'))
     media_collection = client[os.getenv('MONGODB_DATABASE')]['media']
 
