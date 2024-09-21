@@ -11,8 +11,8 @@ const Experiences: CollectionConfig = {
   fields: [
     {
       name: 'company',
-      type: 'text',
-      required: true,
+      type: 'relationship',
+      relationTo: 'companies',
     },
     {
       name: 'title',

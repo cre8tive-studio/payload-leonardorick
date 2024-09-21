@@ -12,6 +12,7 @@ import Recommendations from './collections/Recommendations';
 import Quotes from './collections/Quotes';
 import Generals from './collections/Generals';
 import Experiences from './collections/Experiences';
+import Companies from './collections/Companies';
 
 import PersonalInfo from './globals/PersonalInfo';
 
@@ -27,7 +28,17 @@ export default buildConfig({
     user: Users.slug,
     bundler: webpackBundler(),
   },
-  collections: [Tags, Users, Media, Recommendations, Quotes, People, Generals, Experiences],
+  collections: [
+    Tags,
+    Users,
+    Media,
+    Recommendations,
+    Quotes,
+    People,
+    Generals,
+    Experiences,
+    Companies,
+  ],
   globals: [PersonalInfo],
   localization: {
     defaultLocale: 'en',
