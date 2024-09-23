@@ -27,6 +27,10 @@ const People: CollectionConfig = {
       hasMany: false,
       required: true,
     },
+    {
+      name: 'linkedIn',
+      type: 'text',
+    },
   ],
 };
 export default People;
