@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts nodemon",
     "serve": "npm run dev",
+    "start": "npm run dev",
     "build:payload": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts payload build",
     "build:server": "tsc",
     "build": "npm run copyfiles && npm run build:payload && npm run build:server",
@@ -32,5 +33,6 @@
     "nodemon": "^2.0.6",
     "ts-node": "^9.1.1",
     "typescript": "^4.8.4"
-  }
+  },
+  "packageManager": "pnpm@9.15.6+sha256.5bf88eca1e818b973b9359a16e57405177c7a9b8177b9125d587577311786e64"
 }
